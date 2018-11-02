@@ -14,8 +14,7 @@ public class Jogo {
 		tabuleiro = new Tabuleiro();
 		iniciarJogadores();
 
-		while (jogar())
-			;
+		while (jogar());
 	}
 
 	public void iniciarJogadores() {
