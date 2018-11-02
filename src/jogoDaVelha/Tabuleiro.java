@@ -18,28 +18,29 @@ public class Tabuleiro {
 
 	public void exibirTabuleiro() {
 		System.out.println();
-		for (int linha = 0; linha < 3; linha++) {
-			for (int coluna = 0; coluna < 3; coluna++) {
-				if (tabuleiro[linha][coluna] == -1) {
-					System.out.println(" X ");
-				}
-
-				if (tabuleiro[linha][coluna] == 1) {
-					System.out.println(" O ");
-				}
-
-				if (tabuleiro[linha][coluna] == 0) {
-					System.out.println("  ");
-				}
-
-				if (coluna == 0 || coluna == 1)
-					System.out.println(" | ");
-			}
-
-			System.out.println();
-
-		}
+		System.out.println();
+		System.out.printf("\t\t %s %s %s %s %s \n", tabuleiro[0][0], "|", tabuleiro[0][1], "|", tabuleiro[0][2]);
+		System.out.printf("\t\t%s%s%s%s%s%s%s%s%s%s%s \n", "=", "=", "=", "╬", "=", "=", "=", "╬", "=", "=", "=");
+		System.out.printf("\t\t %s %s %s %s %s \n", tabuleiro[1][0], "|", tabuleiro[1][1], "|", tabuleiro[1][2]);
+		System.out.printf("\t\t%s%s%s%s%s%s%s%s%s%s%s \n", "=", "=", "=", "╬", "=", "=", "=", "╬", "=", "=", "=");
+		System.out.printf("\t\t %s %s %s %s %s \n", tabuleiro[2][0], "|", tabuleiro[2][1], "|", tabuleiro[2][2]);
 	}
+
+	/*
+	 * public void exibirTabuleiro() { System.out.println(); for (int linha = 0;
+	 * linha < 3; linha++) { for (int coluna = 0; coluna < 3; coluna++) { if
+	 * (tabuleiro[linha][coluna] == -1) { System.out.println(" X "); }
+	 * 
+	 * if (tabuleiro[linha][coluna] == 1) { System.out.println(" O "); }
+	 * 
+	 * if (tabuleiro[linha][coluna] == 0) { System.out.println("  "); }
+	 * 
+	 * if (coluna == 0 || coluna == 1) System.out.println(" | "); }
+	 * 
+	 * System.out.println();
+	 * 
+	 * } }
+	 */
 
 	public int getPosicao(int[] tentativa) {
 		return tabuleiro[tentativa[0]][tentativa[1]];
